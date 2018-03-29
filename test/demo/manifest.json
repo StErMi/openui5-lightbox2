@@ -1,0 +1,84 @@
+{
+    "_version": "1.5.0",
+    "sap.app": {
+        "applicationVersion": {
+            "version": "1.0.0"
+        },
+        "dataSources": {
+            "init_data": {
+                "type": "JSON",
+                "uri": "model/data.json"
+            }
+        },
+        "description": "{{appDescription}}",
+        "i18n": "i18n/i18n.properties",
+        "id": "openui5-flatpickr-demo",
+        "sourceTemplate": {
+            "id": "ui5template.basicSAPUI5ApplicationProject",
+            "version": "1.40.12"
+        },
+        "title": "{{appTitle}}",
+        "type": "application"
+    },
+    "sap.ui": {
+        "deviceTypes": {
+            "desktop": true,
+            "phone": true,
+            "tablet": true
+        },
+        "icons": {
+            "favIcon": "",
+            "icon": "",
+            "phone": "",
+            "phone@2": "",
+            "tablet": "",
+            "tablet@2": ""
+        },
+        "supportedThemes": [
+            "sap_hcb",
+            "sap_belize"
+        ],
+        "technology": "UI5"
+    },
+    "sap.ui5": {
+        "contentDensities": {
+            "compact": true,
+            "cozy": true
+        },
+        "dependencies": {
+            "libs": {
+                "it.designfuture.lightbox": {},
+                "sap.m": {},
+                "sap.ui.core": {},
+                "sap.ui.layout": {}
+            },
+            "minUI5Version": "1.30.0"
+        },
+        "models": {
+            "": {
+                "dataSource": "init_data",
+                "type": "sap.ui.model.json.JSONModel"
+            },
+            "i18n": {
+                "settings": {
+                    "bundleName": "openui5-flatpickr-demo.i18n.i18n"
+                },
+                "type": "sap.ui.model.resource.ResourceModel"
+            }
+        },
+        "resourceRoots": {
+            "it.designfuture.lightbox": "./thirdparty/it/designfuture/lightbox/"
+        },
+        "resources": {
+            "css": [
+                {
+                    "uri": "css/style.css"
+                }
+            ]
+        },
+        "rootView": {
+            "type": "XML",
+            "viewName": "openui5-flatpickr-demo.view.Home"
+        }
+    }
+}

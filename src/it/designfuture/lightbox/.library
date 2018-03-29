@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<library xmlns="http://www.sap.com/sap.ui.library.xsd" >
+
+  <name>it.designfuture.lightbox</name>
+  <vendor>OpenUI5 Lightbox</vendor>
+  <copyright>${copyright}</copyright>
+  <version>${version}</version>
+  
+  <documentation>OpenUI5 wrapper of Lightbox2, a small javascript library used to overlay images on top of the current page.</documentation>
+  
+  <dependencies>
+    <dependency>
+      <libraryName>sap.ui.core</libraryName>
+    </dependency>
+    <dependency>
+      <libraryName>sap.m</libraryName>
+    </dependency>
+  </dependencies>
+  
+  <appData>
+  </appData>
+
+</library>

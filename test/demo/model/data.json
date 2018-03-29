@@ -1,0 +1,75 @@
+{
+    "editor_content": [
+        {
+            "attributes": {
+                "bold": true
+            },
+            "insert": "AIRDROP RULES"
+        },
+        {
+            "attributes": {
+                "align": "center"
+            },
+            "insert": "\n"
+        },
+        {
+            "insert": "Must follow "
+        },
+        {
+            "attributes": {
+                "color": "#476c8e",
+                "link": "https://twitter.com/boutspro"
+            },
+            "insert": "boutspro"
+        },
+        {
+            "attributes": {
+                "align": "center"
+            },
+            "insert": "\n"
+        },
+        {
+            "insert": "Must join "
+        },
+        {
+            "attributes": {
+                "color": "#476c8e",
+                "link": "https://t.me/boutspro"
+            },
+            "insert": "TELEGRAM"
+        },
+        {
+            "attributes": {
+                "align": "center"
+            },
+            "insert": "\n"
+        },
+        {
+            "insert": "Must have a minimum 100 twitter followers"
+        },
+        {
+            "attributes": {
+                "align": "center"
+            },
+            "insert": "\n"
+        },
+        {
+            "insert": "Must be active in telegram"
+        },
+        {
+            "attributes": {
+                "align": "center"
+            },
+            "insert": "\n"
+        },
+        {
+            "insert": "Maximum 12000 participants"
+        },
+        {
+            "attributes": {
+                "align": "center"
+            },
+            "insert": "\n"
+        }
+    ]
+}

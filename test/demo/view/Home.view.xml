@@ -1,0 +1,34 @@
+<mvc:View controllerName="openui5-flatpickr-demo.controller.Home" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:mvc="sap.ui.core.mvc"
+	displayBlock="true" xmlns="sap.m" xmlns:df="it.designfuture.lightbox">
+	<App>
+		<pages>
+			<Page title="openui5-flatpickr-demo">
+				<content>
+
+					<Panel>
+						<headerToolbar>
+							<Toolbar>
+								<Title level="H2" text="Gallery" />
+							</Toolbar>
+						</headerToolbar>
+						<df:Lightbox
+							id="lightbox-gallery">
+							<df:content>
+								<df:LightboxImage src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/82/orange-tree.jpg" />
+								<df:LightboxImage src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/82/submerged.jpg" />
+								<df:LightboxImage src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/82/look-out.jpg" />
+								<df:LightboxImage src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/82/one-world-trade.jpg" />
+								<df:LightboxImage src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/82/drizzle.jpg" />
+								<df:LightboxImage src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/82/cat-nose.jpg" />
+								<df:LightboxImage src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/82/contrail.jpg" />
+								<df:LightboxImage src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/82/golden-hour.jpg" />
+								<df:LightboxImage src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/82/flight-formation.jpg" />
+							</df:content>
+						</df:Lightbox>
+					</Panel>
+					
+				</content>
+			</Page>
+		</pages>
+	</App>
+</mvc:View>

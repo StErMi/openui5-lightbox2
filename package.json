@@ -1,0 +1,43 @@
+{
+  "name": "openui5-lightbox",
+  "version": "0.0.1",
+  "description": "OpenUI5 wrapper of Lightbox2, a small javascript library used to overlay images on top of the current page.",
+  "main": "index.js",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/StErMi/openui5-lightbox"
+  },
+  "keywords": [
+    "image",
+    "lightbox",
+    "openui5",
+    "sapui5",
+    "javascript"
+  ],
+  "author": {
+    "name": "Emanuele Ricci",
+    "email": "stermi@gmail.com"
+  },
+  "license": "Apache-2.0",
+  "scripts": {
+    "test": "echo \"Error: no test specified. Please add some.\" && exit 1",
+    "postinstall": "bower install",
+    "start": "grunt"
+  },
+  "devDependencies": {
+    "bower": "^1.8.0",
+    "connect-livereload": "^0.6.0",
+    "grunt": "^1.0.1",
+    "grunt-contrib-clean": "^1.0.0",
+    "grunt-contrib-connect": "^1.0.2",
+    "grunt-contrib-copy": "^1.0.0",
+    "grunt-contrib-jshint": "^1.1.0",
+    "grunt-contrib-uglify": "^2.2.0",
+    "grunt-contrib-watch": "^1.0.0",
+    "grunt-eslint": "^19.0.0",
+    "grunt-openui5": "^0.13.0"
+  },
+  "dependencies": {
+    "lightbox2": "^2.10.0"
+  }
+}
