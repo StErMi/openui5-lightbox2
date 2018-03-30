@@ -6,6 +6,7 @@ module.exports = function(grunt) {
 			dest: 'dist',
 			demo: 'test/demo',
 			src_lib: 'node_modules/lightbox2/dist/js',
+			src_img: 'node_modules/lightbox2/dist/images',
 			bower_components: 'bower_components',
 			node_modules: 'node_modules',
 			css: 'it/designfuture/lightbox/themes/',
@@ -29,11 +30,29 @@ module.exports = function(grunt) {
 		},
 
 		copy: {
+			images: {
+				expand: true,
+				cwd: '<%= dir.src_img %>/',
+				src: ['**'],
+				dest: '<%= dir.dest %>/it/designfuture/lightbox/themes/images/',
+			},
+			replaceCSS: {
+				expand: true,
+				cwd: '<%= dir.dest %>/',
+				src: ['**'],
+				dest: '<%= dir.dest %>/',
+				options: {
+					noProcess: ['**/*.{json,js,xml,png,gif,jpg,ico,pdf}'],
+					process: function(content, srcpath) {
+						return content.replace(/\.\.\/\.\.\/\.\.\/\.\.\/\.\.\/lightbox2\/dist\/images\//g, "../images/");;
+					}
+				}
+			},
 			main: {
 				expand: true,
 				cwd: '<%= dir.dest %>/',
 				src: ['**'],
-				dest: '<%= dir.demo %>/thirdparty/',
+				dest: '<%= dir.demo %>/thirdparty/'
 			},
 		},
 
@@ -148,7 +167,7 @@ module.exports = function(grunt) {
 	grunt.registerTask('build_theme', ['clean', 'openui5_theme']);
 
 	// Build task
-	grunt.registerTask('build', ['clean','openui5_theme', 'openui5_preload', 'copy']);
+	grunt.registerTask('build', ['clean', 'openui5_theme', 'copy:images', 'openui5_preload', 'copy:replaceCSS', 'copy:main']);
 
 	// Default task
 	grunt.registerTask('default', [

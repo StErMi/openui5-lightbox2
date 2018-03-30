@@ -12,7 +12,18 @@
 							</Toolbar>
 						</headerToolbar>
 						<df:Lightbox
-							id="lightbox-gallery">
+							id="lightbox-gallery"
+							alwaysShowNavOnTouchDevices="false"
+							albumLabel="UI5 image %1 of %2"
+							disableScrolling="false"
+							fadeDuration="600"
+							fitImagesInViewport="true"
+							imageFadeDuration="600"
+							positionFromTop="50"
+							resizeDuration="700"
+							showImageNumberLabel="true"
+							wrapAround="false"
+							>
 							<df:content>
 								<df:LightboxImage src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/82/orange-tree.jpg" />
 								<df:LightboxImage src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/82/submerged.jpg" />

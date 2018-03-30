@@ -32,6 +32,27 @@ var LightboxImage = Image.extend("it.designfuture.lightbox.LightboxImage", /** @
     metadata : {
         library: 'it.designfuture.lightbox',
         properties : {
+            
+            /**
+             * 	Src of the Image
+             */
+            src : {type : "string", group : "Appearance", defaultValue : ""},
+            
+            /**
+             * 	Title of the Image
+             */
+            title : {type : "string", group : "Appearance", defaultValue : ""},
+            
+            /**
+             * 	Alt attribute of the Image
+             */
+            alt : {type : "string", group : "Appearance", defaultValue : ""},
+            
+            /**
+             * 	Gallery ID if you want to group images inside a gallery
+             */
+            gallery : {type : "string", group : "Appearance", defaultValue : ""}
+
         },
         events: {}
     },

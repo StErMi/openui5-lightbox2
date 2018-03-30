@@ -74,7 +74,7 @@ html.lb-disable-scrolling {
   width: 32px;
   height: 32px;
   margin: 0 auto;
-  background: url(../../../../../lightbox2/dist/images/loading.gif) no-repeat;
+  background: url(../images/loading.gif) no-repeat;
 }
 .lb-nav {
   top: 0;
@@ -99,7 +99,7 @@ html.lb-disable-scrolling {
   width: 34%;
   right: 0;
   float: right;
-  background: url(../../../../../lightbox2/dist/images/prev.png) right 48% no-repeat;
+  background: url(../images/prev.png) right 48% no-repeat;
   filter: alpha(opacity=0);
   opacity: 0;
   -webkit-transition: opacity .6s;
@@ -115,7 +115,7 @@ html.lb-disable-scrolling {
   width: 64%;
   left: 0;
   float: left;
-  background: url(../../../../../lightbox2/dist/images/next.png) left 48% no-repeat;
+  background: url(../images/next.png) left 48% no-repeat;
   filter: alpha(opacity=0);
   opacity: 0;
   -webkit-transition: opacity .6s;
@@ -167,7 +167,7 @@ html.lb-disable-scrolling {
   float: left;
   width: 30px;
   height: 30px;
-  background: url(../../../../../lightbox2/dist/images/close.png) top left no-repeat;
+  background: url(../images/close.png) top left no-repeat;
   text-align: right;
   outline: 0;
   filter: alpha(opacity=70);
