@@ -6,9 +6,10 @@
 sap.ui.define([
     'jquery.sap.global',
     'sap/ui/core/Control',
+    'sap/ui/layout/Grid',
     './3rdparty/lightbox.min',
     './library'
-], function(jQuery, Control, lightboxLib, library) {
+], function(jQuery, Control, Grid, lightboxLib, library) {
 "use strict";
 
 /**
@@ -106,7 +107,8 @@ var Lightbox = Control.extend("it.designfuture.lightbox.Lightbox", /** @lends it
 			/**
 			 * Controls that are placed into layout.
 			 */
-			content : {type : "it.designfuture.lightbox.LightboxImage", multiple : true, singularName : "content"}
+			content : {type : "it.designfuture.lightbox.LightboxImage", multiple : true, singularName : "content"},
+            _grid : {type : "sap.ui.layout.Grid", multiple : false, visibility: "hidden"}
 		},
         events: {
             
@@ -115,6 +117,7 @@ var Lightbox = Control.extend("it.designfuture.lightbox.Lightbox", /** @lends it
     
     init: function() {
         //	Init all the things!
+    	this.setAggregation("_grid", new Grid());
     },
     
     onAfterRendering: function() {

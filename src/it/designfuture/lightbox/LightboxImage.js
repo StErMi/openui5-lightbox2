@@ -39,6 +39,11 @@ var LightboxImage = Image.extend("it.designfuture.lightbox.LightboxImage", /** @
             src : {type : "string", group : "Appearance", defaultValue : ""},
             
             /**
+             * 	Height of the Image
+             */
+            height : {type : "string", group : "Appearance", defaultValue : "200px"},
+            
+            /**
              * 	Title of the Image
              */
             title : {type : "string", group : "Appearance", defaultValue : ""},
@@ -54,18 +59,35 @@ var LightboxImage = Image.extend("it.designfuture.lightbox.LightboxImage", /** @
             gallery : {type : "string", group : "Appearance", defaultValue : ""}
 
         },
+        aggregations: {
+            /**
+             * 	Image aggregation for using the sap.m.Image control in this control (act as a Composite control)
+             */
+            _image : {type : "sap.m.Image", multiple : false, visibility: "hidden"}
+         },
         events: {}
     },
     
     ////////////////////////////////////////////////////
     //	INTERNAL METHODS
     ////////////////////////////////////////////////////
-    
+    init:function(){
+    	this.setAggregation("_image", new Image({width:"100%",height:this.getHeight(),src:this.getSrc()}));
+    },
     
     ////////////////////////////////////////////////////
     //	GETTER & SETTER FOR PROPERTIES
     ////////////////////////////////////////////////////
 
+    ////////////////////////////////////////////////////
+    setSrc:function(sSrc){
+        this.setProperty("src", sSrc, true /*no re-rendering of whole lightbox image needed*/);
+        this.getAggregation("_image").setSrc(sSrc); // Note: this triggers re-rendering of Image!
+    },
+    setHeight:function(sHeight){
+        this.setProperty("height", sHeight, true /*no re-rendering of whole lightbox image needed*/);
+        this.getAggregation("_image").setHeight(sHeight); // Note: this triggers re-rendering of Image!
+    }
     
 });
 

@@ -26,17 +26,19 @@ sap.ui.define(['jquery.sap.global', 'sap/ui/core/Renderer', 'sap/m/ImageRenderer
 	LightboxImageRenderer.render = function(oRm, oControl) {
 		// Link is rendered as a "<a>" element
 		oRm.write("<a");
-
+		oRm.writeControlData(oControl);
 		oRm.writeAttributeEscaped("href", oControl.getSrc());
 
 		////////////////////////////////////////////// Lightbox CUSTOM
 		oRm.writeAttribute("data-lightbox", "roadtrip");
 
 		oRm.write(">"); // opening <a> tag
-
+/*
 		oRm.write("<img");
 		oRm.writeAttributeEscaped("src", oControl.getSrc());
 		oRm.write("/>"); // opening <a> tag
+*/
+		oRm.renderControl(oControl.getAggregation("_image"));
 
 		//ImageRenderer.prototype.render.apply(this, arguments);
 
