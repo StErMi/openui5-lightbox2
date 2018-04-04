@@ -24,24 +24,13 @@ sap.ui.define(['jquery.sap.global', 'sap/ui/core/Renderer', 'sap/m/ImageRenderer
 	 * @param {sap.ui.core.Control} oControl an object representation of the control that should be rendered
 	 */
 	LightboxImageRenderer.render = function(oRm, oControl) {
-		// Link is rendered as a "<a>" element
 		oRm.write("<a");
 		oRm.writeControlData(oControl);
 		oRm.writeAttributeEscaped("href", oControl.getSrc());
-
-		////////////////////////////////////////////// Lightbox CUSTOM
-		oRm.writeAttribute("data-lightbox", "roadtrip");
-
-		oRm.write(">"); // opening <a> tag
-/*
-		oRm.write("<img");
-		oRm.writeAttributeEscaped("src", oControl.getSrc());
-		oRm.write("/>"); // opening <a> tag
-*/
+		oRm.writeAttribute("data-title", oControl.getTitle());
+		oRm.writeAttribute("data-lightbox", oControl.getParent().getParent().getGallery());
+		oRm.write(">");
 		oRm.renderControl(oControl.getAggregation("_image"));
-
-		//ImageRenderer.prototype.render.apply(this, arguments);
-
 		oRm.write("</a>");
 	};
  

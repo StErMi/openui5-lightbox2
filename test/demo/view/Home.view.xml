@@ -13,6 +13,7 @@
 						</headerToolbar>
 						<df:Lightbox
 							id="lightbox-gallery"
+							gallery="lightbox-gallery"
 							alwaysShowNavOnTouchDevices="false"
 							albumLabel="UI5 image %1 of %2"
 							disableScrolling="false"
@@ -25,15 +26,15 @@
 							wrapAround="false"
 							>
 							<df:content>
-								<df:LightboxImage src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/82/orange-tree.jpg" />
-								<df:LightboxImage src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/82/submerged.jpg" />
-								<df:LightboxImage src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/82/look-out.jpg" />
-								<df:LightboxImage src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/82/one-world-trade.jpg" />
-								<df:LightboxImage src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/82/drizzle.jpg" />
-								<df:LightboxImage src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/82/cat-nose.jpg" />
-								<df:LightboxImage src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/82/contrail.jpg" />
-								<df:LightboxImage src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/82/golden-hour.jpg" />
-								<df:LightboxImage src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/82/flight-formation.jpg" />
+								<df:LightboxImage src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/82/orange-tree.jpg" title="Title 1" alt="Alt 1" />
+								<df:LightboxImage src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/82/submerged.jpg"  title="Title 2" alt="Alt 2" />
+								<df:LightboxImage src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/82/look-out.jpg"  title="Title 3" alt="Alt 3" />
+								<df:LightboxImage src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/82/one-world-trade.jpg"  title="Title 4" alt="Alt 4" />
+								<df:LightboxImage src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/82/drizzle.jpg"  title="Title 5" alt="Alt 5" />
+								<df:LightboxImage src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/82/cat-nose.jpg"  title="Title 6" alt="Alt 6" />
+								<df:LightboxImage src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/82/contrail.jpg"  title="Title 7" alt="Alt 7" />
+								<df:LightboxImage src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/82/golden-hour.jpg"  title="Title 8" alt="Alt 8" />
+								<df:LightboxImage src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/82/flight-formation.jpg"  title="Title 9" alt="Alt 9" />
 							</df:content>
 						</df:Lightbox>
 					</Panel>

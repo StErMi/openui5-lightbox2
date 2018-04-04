@@ -17,15 +17,6 @@ sap.ui.define([
 		///////////////////////////////////////////////////////////////////////
 		//	EVENTS
 		///////////////////////////////////////////////////////////////////////
-
-		onChange: function(oEvent) {
-			var editor = this.getView().byId("editor");
-			var content = this.getView().byId("content");
-			var text = this.getView().byId("text");
-
-			//content.setValue(JSON.stringify(oEvent.getParameter("content")));
-			text.setValue(editor.getText());
-		}
 		
 
 	});

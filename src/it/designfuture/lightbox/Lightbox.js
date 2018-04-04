@@ -36,6 +36,11 @@ var Lightbox = Control.extend("it.designfuture.lightbox.Lightbox", /** @lends it
         properties : {
             
             /**
+             * 	Gallery ID if you want to group images inside a gallery
+             */
+            gallery : {type : "string", group : "Appearance", defaultValue : null},
+            
+            /**
              * 	If true, the left and right navigation arrows which appear on mouse hover when viewing image 
              *  sets will always be visible on devices which support touch.
              */
@@ -117,7 +122,11 @@ var Lightbox = Control.extend("it.designfuture.lightbox.Lightbox", /** @lends it
     
     init: function() {
         //	Init all the things!
-    	this.setAggregation("_grid", new Grid());
+        this.setAggregation("_grid", new Grid());
+        
+        if ( !this.getGallery() ) {
+            this.setGallery( this.getId() );
+        }
     },
     
     onAfterRendering: function() {

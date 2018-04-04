@@ -36,7 +36,12 @@ var LightboxImage = Image.extend("it.designfuture.lightbox.LightboxImage", /** @
             /**
              * 	Src of the Image
              */
-            src : {type : "string", group : "Appearance", defaultValue : ""},
+            src : {type : "string", group : "Appearance", defaultValue : null},
+            
+            /**
+             * 	Thumb of the Image
+             */
+            thumb : {type : "string", group : "Appearance", defaultValue : null},
             
             /**
              * 	Height of the Image
@@ -52,11 +57,6 @@ var LightboxImage = Image.extend("it.designfuture.lightbox.LightboxImage", /** @
              * 	Alt attribute of the Image
              */
             alt : {type : "string", group : "Appearance", defaultValue : ""},
-            
-            /**
-             * 	Gallery ID if you want to group images inside a gallery
-             */
-            gallery : {type : "string", group : "Appearance", defaultValue : ""}
 
         },
         aggregations: {
@@ -72,7 +72,12 @@ var LightboxImage = Image.extend("it.designfuture.lightbox.LightboxImage", /** @
     //	INTERNAL METHODS
     ////////////////////////////////////////////////////
     init:function(){
-    	this.setAggregation("_image", new Image({width:"100%",height:this.getHeight(),src:this.getSrc()}));
+    	this.setAggregation("_image", new Image({
+            width: "100%",
+            height: this.getHeight(),
+            alt: this.getAlt(),
+            src: this.getThumb() ? this.getThumb() : this.getSrc()
+        }));
     },
     
     ////////////////////////////////////////////////////
