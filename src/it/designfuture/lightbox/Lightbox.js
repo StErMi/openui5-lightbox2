@@ -5,11 +5,10 @@
 // Provides control it.designfuture.lightbox.Lightbox
 sap.ui.define([
     'jquery.sap.global',
-    'sap/ui/core/Control',
     'sap/ui/layout/Grid',
     './3rdparty/lightbox.min',
     './library'
-], function(jQuery, Control, Grid, lightboxLib, library) {
+], function(jQuery, Grid, lightboxLib, library) {
 "use strict";
 
 /**
@@ -29,7 +28,7 @@ sap.ui.define([
  * @name it.designfuture.lightbox.Lightbox
  */
 
-var Lightbox = Control.extend("it.designfuture.lightbox.Lightbox", /** @lends it.designfuture.lightbox.Lightbox prototype */ { 
+var Lightbox = Grid.extend("it.designfuture.lightbox.Lightbox", /** @lends it.designfuture.lightbox.Lightbox prototype */ { 
     
     metadata : {
         library: 'it.designfuture.lightbox',
@@ -106,15 +105,6 @@ var Lightbox = Control.extend("it.designfuture.lightbox.Lightbox", /** @lends it
             wrapAround : {type : "boolean", group : "Appearance", defaultValue : false},
             
         },
-		defaultAggregation : "content",
-		aggregations : {
-
-			/**
-			 * Controls that are placed into layout.
-			 */
-			content : {type : "it.designfuture.lightbox.LightboxImage", multiple : true, singularName : "content"},
-            _grid : {type : "sap.ui.layout.Grid", multiple : false, visibility: "hidden"}
-		},
         events: {
             
         }
@@ -122,8 +112,6 @@ var Lightbox = Control.extend("it.designfuture.lightbox.Lightbox", /** @lends it
     
     init: function() {
         //	Init all the things!
-        this.setAggregation("_grid", new Grid());
-        
         if ( !this.getGallery() ) {
             this.setGallery( this.getId() );
         }
@@ -172,7 +160,7 @@ var Lightbox = Control.extend("it.designfuture.lightbox.Lightbox", /** @lends it
 * @public
 */	
 Lightbox.prototype.exit = function() {
-    Control.prototype.exit.apply(this, arguments);
+    Grid.prototype.exit.apply(this, arguments);
 };
 
 return Lightbox;

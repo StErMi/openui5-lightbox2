@@ -28,7 +28,7 @@ sap.ui.define(['jquery.sap.global', 'sap/ui/core/Renderer', 'sap/m/ImageRenderer
 		oRm.writeControlData(oControl);
 		oRm.writeAttributeEscaped("href", oControl.getSrc());
 		oRm.writeAttribute("data-title", oControl.getTitle());
-		oRm.writeAttribute("data-lightbox", oControl.getParent().getParent().getGallery());
+		oRm.writeAttribute("data-lightbox", oControl.getParent().getGallery());
 		oRm.write(">");
 		oRm.renderControl(oControl.getAggregation("_image"));
 		oRm.write("</a>");
