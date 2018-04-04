@@ -24,6 +24,6 @@ sap.ui.define(['jquery.sap.global', 'sap/ui/layout/GridRenderer'],
 	};
 	
 
-	return LightboxRenderers;
+	return LightboxRenderer;
 
 }, /* bExport= */ true);
